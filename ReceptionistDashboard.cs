@@ -6,19 +6,20 @@ namespace HMS
 {
     public partial class ReceptionistDashboard : Form
     {
-        private readonly PatientService _patientService;
+        private readonly PatientRepository _patientRepo;
 
-        public ReceptionistDashboard(PatientService patientService)
+        public ReceptionistDashboard(PatientRepository patientRepo)
         {
-            _patientService = patientService;
-            InitializeComponent(); // calls the Designer code
+            _patientRepo = patientRepo;
+            InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
         }
 
         private void btnSearchPatient_Click(object sender, EventArgs e)
         {
-            new ReceptionistSearchForm(_patientService).Show();
+            new ReceptionistSearchForm(_patientRepo).Show();
             this.Hide();
         }
+
     }
 }
