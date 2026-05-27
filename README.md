@@ -1,2 +1,1 @@
-# SoftwareEngineeringProjet 
-Hospotal Management System Implementation
+# Mock Hospotal Management System Implementation
